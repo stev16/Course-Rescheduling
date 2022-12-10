@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".replacementClassDetails">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Subject Code"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Total Student"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textView20"
+                    app:layout_constraintTop_toBottomOf="@+id/replacementSubjectName" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Venue"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textView24"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBtn" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Date"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textView25"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerVenue" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Day"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textView26"
+                    app:layout_constraintTop_toBottomOf="@+id/textDateView" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Time"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textView27"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+                <EditText
+                    android:id="@+id/editTextSubjectCode"
+                    android:layout_width="0dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="8dp"
+                    android:capitalize="characters"
+                    android:ems="10"
+                    android:textColor="@color/black"
+                    android:hint="Subject Code"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:textAllCaps="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView23"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/editTextNumber"
+                    app:layout_constraintTop_toTopOf="@+id/textView23" />
+
+                <EditText
+                    android:id="@+id/editTextNumber"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:hint="0"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView24"
+                    app:layout_constraintEnd_toStartOf="@+id/checkBtn"
+                    app:layout_constraintStart_toEndOf="@+id/textView24"
+                    app:layout_constraintTop_toTopOf="@+id/textView24" />
+
+                <Button
+                    android:id="@+id/checkBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Check Class"
+                    android:textAllCaps="false"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView24"
+                    app:layout_constraintEnd_toEndOf="@+id/editTextSubjectCode"
+                    app:layout_constraintTop_toTopOf="@+id/textView24" />
+
+                <Spinner
+                    android:id="@+id/spinnerVenue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Venue Replacement Class"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView25"
+                    app:layout_constraintEnd_toEndOf="@+id/checkBtn"
+                    app:layout_constraintStart_toStartOf="@+id/editTextNumber"
+                    app:layout_constraintTop_toTopOf="@+id/textView25" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/replacementTimeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/text_bg"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@+id/spinnerVenue"
+                    app:layout_constraintStart_toStartOf="@+id/textView26"
+                    app:layout_constraintTop_toBottomOf="@+id/textView27">
+
+                    <RadioButton
+                        android:id="@+id/saturday_RB"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:text="Saturday" />
+
+                    <RadioButton
+                        android:id="@+id/sunday_RB"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sunday" />
+                </com.whygraphics.multilineradiogroup.MultiLineRadioGroup>
+
+                <TextView
+                    android:id="@+id/textDateView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Date Chosen"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@+id/chooseDateBtn"
+                    app:layout_constraintStart_toStartOf="@+id/textView26"
+                    app:layout_constraintTop_toBottomOf="@+id/chooseDateBtn"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/chooseDateBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose Date"
+                    android:textAllCaps="false"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView26"
+                    app:layout_constraintEnd_toEndOf="@+id/spinnerVenue"
+                    app:layout_constraintTop_toTopOf="@+id/textView26" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Subject Name"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textView23"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextSubjectCode" />
+
+                <Button
+                    android:id="@+id/generateBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Generate Subject"
+                    android:textAllCaps="false"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                    app:layout_constraintEnd_toEndOf="@+id/editTextSubjectCode"
+                    app:layout_constraintStart_toStartOf="@+id/editTextSubjectCode"
+                    app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+                <TextView
+                    android:id="@+id/replacementSubjectName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/time_bg"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp"
+                    android:text=""
+                    app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                    app:layout_constraintEnd_toEndOf="@+id/editTextSubjectCode"
+                    app:layout_constraintStart_toStartOf="@+id/editTextSubjectCode"
+                    app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/proceedBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollView3"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="Proceed"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView3"
+        tools:layout_editor_absoluteY="755dp" />
+
+
+</RelativeLayout>

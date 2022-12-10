@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Course Reschedule</string>
+    <string name="sjcode">sjCode</string>
+    <string name="sjtime">sjTime</string>
+    <string name="sjclass">sjClass</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- to toggle the open close button of the navigation drawer -->
+</resources>

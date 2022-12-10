@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1098437499473",
+    "firebase_url": "https://course-reschedule-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "course-reschedule",
+    "storage_bucket": "course-reschedule.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098437499473:android:b8d0c3dc047a9208caf670",
+        "android_client_info": {
+          "package_name": "com.example.coursereschedule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098437499473-jkf3v79d1331i50mkhehhsssfu3fcln2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1eNcz1Hzxfda9D-LgTdJUSK24sZZhlO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1098437499473-jkf3v79d1331i50mkhehhsssfu3fcln2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B73E3E"
+    tools:context=".registerPage">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="229dp"
+        android:layout_height="212dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/ucsi_logo_cutted"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/username_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/text_bg"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/userid_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/text_bg"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        android:hint="Your Staff ID"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/username_register"
+        app:layout_constraintStart_toStartOf="@+id/username_register"
+        app:layout_constraintTop_toBottomOf="@+id/username_register" />
+
+    <EditText
+        android:id="@+id/email_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/text_bg"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/username_register"
+        app:layout_constraintStart_toStartOf="@+id/username_register"
+        app:layout_constraintTop_toBottomOf="@+id/userid_register" />
+
+    <EditText
+        android:id="@+id/password_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/text_bg"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/email_register"
+        app:layout_constraintStart_toStartOf="@+id/email_register"
+        app:layout_constraintTop_toBottomOf="@+id/email_register" />
+
+    <Button
+        android:id="@+id/signUp_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B3FFAE"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/Cancel_btn"
+        app:layout_constraintEnd_toEndOf="@+id/password_register"
+        app:layout_constraintTop_toTopOf="@+id/Cancel_btn" />
+
+    <Button
+        android:id="@+id/Cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#ff3300"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/password_register"
+        app:layout_constraintTop_toBottomOf="@+id/password_register" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
